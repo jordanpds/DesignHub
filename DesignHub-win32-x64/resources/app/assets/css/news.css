@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap');
+html, body {
+	width: 100%;
+	height: 100%;
+  font-family: 'Red Hat Display', sans-serif;
+  padding: 5px;
+	overflow: hidden;
+}
+
+body {
+	width: 150%;
+}
+
+#headline,#date,#author {
+  letter-spacing: 1px;
+	/* text-transform: uppercase; */
+  margin: 0;
+  padding: 0;
+}
+
+#article {
+	overflow-x: hidden;
+	display: grid;
+	height: calc(100vh - 10px);
+	width: calc(100vw - 10px);
+	margin: -5px;
+	/* padding: 5px; */
+	grid-template-areas:
+	"ah ah ah ah"
+	"ab ab ab ab"
+	"ac ac ac ac";
+	grid-template-rows: 75px auto auto auto;
+	grid-template-columns: auto auto auto auto;
+}
+
+#head {
+	grid-area: ah;
+	display: grid;
+	grid-template-areas:
+	"hh hh"
+	"hd ha";
+	grid-template-rows: 50px 25px;
+	grid-template-columns: auto auto;
+	/* background-color: rgba(175, 175, 0, 0.2); */
+}
+
+#headline {
+	grid-area: hh;
+	display: block;
+	font-size: 26pt;
+  float: left;
+	padding: 0 10px 0 10px;
+	/* background-color: rgba(175, 0, 0, 0.2); */
+}
+
+
+#date {
+	grid-area: hd;
+  font-size: 10pt;
+  float: left;
+  text-align: left;
+  font-style: italic;
+  padding-right: 15px;
+	padding: 0 0 0 10px;
+	/* background-color: rgba(0, 175, 0, 0.2); */
+}
+
+#author {
+	grid-area: ha;
+  font-size: 10pt;
+  float: right;
+  text-align: right;
+  font-style: italic;
+  padding: 0 10px 0 0;
+	/* background-color: rgba(0, 0, 175, 0.2); */
+}
+
+#banner	{
+  grid-area: ab;
+  width: 98%;
+  height: 0.5px;
+  margin: 0px 2% 5px 2%;
+	background-color: rgba(155, 155, 155, 0.3);
+}
+
+#content {
+	grid-area: ac;
+	padding: 5px;
+	/* background-color: rgba(0,175, 0, 0.2); */
+}

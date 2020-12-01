@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="utf-8">
+		<title>DesignHub: Knowledge Base</title>
+		<link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+		<link rel="stylesheet" type="text/css" href="../assets/css/nav.css">
+		<script src="../assets/scripts/checkfiles.js" charset="utf-8"></script>
+		<script src="../assets/scripts/applications.js" charset="utf-8"></script>
+	</head>
+	<body class="homepage" onload="onStart();">
+
+		<!-- Header -->
+		<div id="top-banner">
+			<div class="box">
+				&nbsp;
+			</div>
+		</div>
+
+			<div id="header">
+				<div class="container">
+					<!-- Logo -->
+					<div id="logo">
+						<a href="#" onclick="linkNews();"><img src="../assets/img/kb/title.png" alt="DH Knowledge Base"></a>
+					</div>
+
+					<div class="options" id="forms" style="display: none;">
+						<input type="checkbox" alt="Theorem" id="chk-theorem" onclick="onChange();">
+						<label for="chkTheorem">Theorem</label>
+						<br />
+						<input type="radio" name="office-location" id="office-windsor" value="windsor" onclick="onChange();" checked>
+						<label for="windsor">Windsor</label>
+						<br />
+						<input type="radio" name="office-location" id="office-dearborn" value="dearborn" onclick="onChange();">
+						<label for="dearborn">Dearborn</label>
+					</div>
+
+					<div id="filler">
+						<div class="filler">
+							<br />
+							<br />
+						</div>
+					</div>
+
+
+					<div class="navbar">
+						<a href="#" onclick="navNews();">Home</a>
+						<div class="dropdown">
+							<button class="dropbtn" onclick=""><span>OEM</span></button>
+							<div class="dropdown-content">
+								<a href="#" onclick="">Ford</a>
+								<a href="#" onclick="">GM</a>
+								<a href="#" onclick="">Toyota</a>
+								<a href="#" onclick="">Chrysler</a>
+							</div>
+						</div>
+						<div class="dropdown">
+							<button class="dropbtn" onclick=""><span>Software</span></button>
+							<div class="dropdown-content">
+								<a href="#" onclick="">CATIA</a>
+								<a href="#" onclick="">NX</a>
+								<a href="#" onclick="">Moldflow</a>
+								<a href="#" onclick="">Solidworks</a>
+								<a href="#" onclick="">Creo</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Header -->
+
+
+		<!-- Banner -->
+		<div id="banner">
+			<div class="container">
+			</div>
+		</div>
+	<!-- /Banner -->
+
+	<!-- Main -->
+	<div id="page">
+
+		<!-- Main -->
+		<div id="main" class="container">
+			<div id="news-container">
+				<section id="news-latest">
+					<div class="row">
+						<h2>Information</h2>
+						<p>
+							Welcome to the Knowledge Base, here you can find a repository of information accumilated for tutorials, troubleshooting, and general information.
+						</p>
+						<p>
+							For OEM specific tutorials, troubleshooting you can select the OEM from the drop down list
+						</p>
+						<p>
+							Please be aware that this Knowledge Base is a work in progress, if there is information missing please contact us and we'll look into adding it in the next update.
+						</p>
+					</div>
+				</section>
+			</div>
+			<div id="apps-container" style="display: none;">
+				<article id="apps-native" style="display: none;">
+					<section class="row">
+						<button class="button app-catia29 theorem" title="" onclick="runProgram('app-catia29-4tier');">Ford 4Tier - Catia</button>
+						<button class="button app-catia29 theorem" title="" onclick="runProgram('app-catia29-loc2');">Ford Loc2 - Catia</button>
+						<button class="button app-catia27 theorem" title="" onclick="runProgram('app-toyota');">Toyota - Catia</button>
+						<button class="button app-nx11 notheorem" title="" onclick="runProgram('app-gm');">GM - NX 11</button>
+					</section>
+					<section class="row">
+						<button class="button app-nx12 notheorem" title="" onclick="runProgram('app-daimler');">Daimler - NX 12</button>
+						<button class="button app-tce-loc1 notheorem" title="" onclick="runProgram('app-tce-loc1');">4Tier Teamcenter</button>
+						<button class="button app-tce-loc2 notheorem" title="" onclick="runProgram('app-tce-loc2');">Loc2 Teamcenter</button>
+					</section>
+				</article>
+				<article id="apps-base" style="display: none;">
+					<section class="row">
+						<button class="button app-catia25 theorem" title="" onclick="runProgram('app-catia25');">Catia V5 R25</button>
+						<button class="button app-catia26 theorem" title="" onclick="runProgram('app-catia26');">Catia V5 R26</button>
+						<button class="button app-catia27 theorem" title="" onclick="runProgram('app-catia27');">Catia V5 R27</button>
+						<button class="button app-catia28 theorem" title="" onclick="runProgram('app-catia28');">Catia V5 R28</button>
+					</section>
+					<section class="row">
+						<button class="button app-catia29 theorem" title="" onclick="runProgram('app-catia29');">Catia V5 R29</button>
+						<button class="button app-catia2020 notheorem" title="" onclick="runProgram('app-catia2020');">Catia V6 R2020</button>
+						<button class="button app-nx11 theorem" title="" onclick="runProgram('app-nx11');">NX 11</button>
+						<button class="button app-nx12 notheorem" title="" onclick="runProgram('app-nx12');">NX 12</button>
+					</section>
+					<section class="row">
+						<button class="button app-nx1855 notheorem" title="" onclick="runProgram('app-nx1855');">NX 1855</button>
+						<button class="button app-sldwrks notheorem" title="" onclick="runProgram('app-sldwrks');">Solidworks</button>
+					</section>
+				</article>
+				<article id="apps-main" style="display: none;">
+					<section class="row">
+						<button class="button app-main1 notheorem" title="" onclick="runProgram('app-main1');">Teamcenter Clean</button>
+						<button class="button app-main1 notheorem" title="" onclick="runProgram('app-main2');">Reset All Catia Settings</button>
+						<button class="button app-main1 notheorem" title="" onclick="runProgram('app-main3');">Maintenance App 3</button>
+						<button class="button app-main1 notheorem" title="" onclick="runProgram('app-main4');">Maintenance App 4</button>
+					</section>
+				</article>
+			</div>
+		</div>
+	</div>
+		<!-- Main -->
+
+	</div>
+	<!-- Main -->
+
+	<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+				</div>
+			</div>
+		</div>
+	<!-- /Footer -->
+
+  </body>
+	<script src="../assets/scripts/nav.js" charset="utf-8"></script>
+</html>
