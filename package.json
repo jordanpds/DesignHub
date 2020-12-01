@@ -1,6 +1,6 @@
 {
   "name": "DesignHub",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "DesignHub is the hub for all news, applications, and knowledge base",
   "main": "main.js",
   "scripts": {
