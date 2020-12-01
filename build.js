@@ -4,9 +4,9 @@ var electronInstaller = require('electron-winstaller');
 var settings = {
     appDirectory: './DesignHub-win32-x64',
     outputDirectory: './DesignHub-installers',
-    authors: 'Jordan Marentette',
+    authors: 'DesignHub',
     exe: './DesignHub.exe',
-    iconURL: 'https://productivedesignservices-my.sharepoint.com/personal/jordan_productivedesign_com/Documents/Electron/logo.ico',
+    iconURL: 'https://github.com/jordanpds/DesignHub/blob/master/assets/img/logo.ico',
     setupExe: 'Setup.exe',
     setupIcon: './assets/img/logo.ico'
 };

@@ -1,18 +1,15 @@
 {
   "name": "DesignHub",
   "version": "0.2.0",
-  "description": "DesignHub is the hub for all news, applications, and knowledge base",
+  "description": "DesignHub is a shortcut launcher",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/jordanpds/designhub",
   "keywords": [
     "DesignHub",
-    "Productive Design",
     "Interface",
-    "Shortcuts",
-    "Knowledge Base"
+    "Shortcuts"
   ],
   "author": "DesignHub",
   "license": "CC0-1.0",
