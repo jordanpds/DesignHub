@@ -9,7 +9,7 @@ let userPrefs = {
   }
 };
 
-let store = new Store({userPrefs});
+let getUserPref = new Store({userPrefs});
 
 var apps = [
  {filePath: 'C:\\Program Files\\Dassault Systemes\\B25\\win_b64\\code\\bin\\CATSTART.exe', name: 'app-catia25'},
@@ -34,12 +34,12 @@ function onChange(e){
   if (e.checked) {
     for (var i = 0; i < chk.length; i++){
       chk[i].checked = true;
-      store.set('theorem', true);
+      getUserPref.set('theorem', true);
     }
   } else {
     for (var i = 0; i < chk.length; i++){
       chk[i].checked = false;
-      store.set('theorem', false);
+      getUserPref.set('theorem', false);
     }
   }
   checkDriveConnect(e.checked);

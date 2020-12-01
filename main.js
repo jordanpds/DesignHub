@@ -17,8 +17,6 @@ if (handleSquirrelEvent(apps)) {
     return;
 }
 
-
-
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
@@ -49,13 +47,15 @@ function createMainWindow() {
       preload: 'file://'+app.getAppPath()+'\\preload.js',
       nodeIntegration: true,
       nodeIntegrationInWorker: true,
-      webviewTag: true
+      webviewTag: true,
+      enableRemoteModule: true,
+      contextIsolation: false
     }
   });
 
   // Set the default maximum and minimum size of mainWindow
   mainWindow.setMinimumSize(850, 650);
-  // mainWindow.setMaximumSize(850, 650);
+  mainWindow.setMaximumSize(850, 650);
 
   // and load the index.html of the app
   mainWindow.loadFile('src/index.html');
